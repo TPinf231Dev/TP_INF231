@@ -1,0 +1,44 @@
+#include <stdio.h>
+
+int main() {
+    int n, m;
+    printf("Taille du vecteur (n) : ");
+    scanf("%d", &n);
+    printf("Nombre de colonnes de la matrice (m) : ");
+    scanf("%d", &m);
+
+    int v[n];
+    int M[n][m];
+    int resultat[m];
+
+    // Lecture du vecteur
+    printf("Entrer les %d éléments du vecteur :\n", n);
+    for (int i = 0; i < n; i++) {
+        scanf("%d", &v[i]);
+    }
+
+    // Lecture de la matrice
+    printf("Entrer les éléments de la matrice (%d x %d) :\n", n, m);
+    for (int i = 0; i < n; i++) {
+        for (int j = 0; j < m; j++) {
+            scanf("%d", &M[i][j]);
+        }
+    }
+
+    // Calcul du produit vecteur × matrice
+    for (int j = 0; j < m; j++) {
+        resultat[j] = 0;
+        for (int i = 0; i < n; i++) {
+            resultat[j] += v[i] * M[i][j];
+        }
+    }
+
+    // Affichage du résultat
+    printf("Résultat (vecteur de taille %d) :\n", m);
+    for (int j = 0; j < m; j++) {
+        printf("%d ", resultat[j]);
+    }
+    printf("\n");
+
+    return 0;
+}
