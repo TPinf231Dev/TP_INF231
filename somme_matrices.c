@@ -3,7 +3,7 @@
 int main(){
 	int m, n;
 	printf("Entrez le nombre de lignes: ");
-	scanf("%d",&m);
+	scanf("%d",&m); 
 	printf("Entrez le nombre de colonnes: ");
 	scanf("%d",&n);
 	int P[m][n], Q[m][n], som[m][n];
